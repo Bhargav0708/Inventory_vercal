@@ -44,12 +44,13 @@ const start = async () => {
     await sequelize.sync({ alter: true });
     console.log("✅ Database connected");
 
-    app.listen(PORT, () => {
-      console.log(`🚀 Server running on http://localhost:${PORT}`);
-    });
+    // app.listen(PORT, () => {
+    //   console.log(`🚀 Server running on http://localhost:${PORT}`);
+    // });
   } catch (err) {
     console.error("❌ Failed to start app:", err);
   }
 };
 
 start();
+export default app;
